@@ -115,6 +115,9 @@ cd page-summarizer
 
 Or download and unzip the repository manually.
 
+2. Add your Groq API key
+Open background.js and replace the placeholder on line 3:
+
 
 # Installation & Usage
 
