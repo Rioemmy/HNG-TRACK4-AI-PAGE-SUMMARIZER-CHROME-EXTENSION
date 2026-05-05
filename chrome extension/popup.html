@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Summarizer</title>
+  <link rel="stylesheet" href="./popup.css">
+</head>
+
+<body>
+  <article>
+
+    <!-- Header -->
+    <div class="heading">
+      <button class="icon-btn">
+        <img class="heading-icon" src="./images/icon.svg" alt="Page Summarizer icon">
+      </button>
+      <h2>Page Summarizer</h2>
+    </div>
+
+    <!-- Current page info -->
+    <section class="page-section">
+      <p class="page-text">Current Page</p>
+      <div class="page-details">
+        <button class="icon-btn">
+          <img class="icon" src="./images/doc-icon.svg" alt="Document icon">
+        </button>
+        <!-- Populated by popup.js on load -->
+        <h3 id="page-title">Ready To Summarize</h3>
+      </div>
+    </section>
+
+    <!-- Action buttons -->
+    <div class="btn-container">
+      <button class="summarize-btn" id="summarize-btn">
+        <img class="icon" src="./images/magic-icon.svg" alt="">
+        <p class="btn-texts">Summarize Page</p>
+      </button>
+
+      <button class="clear-btn" id="reset-btn">
+        <img class="icon" src="./images/clear-icon.svg" alt="">
+        <p class="btn-texts">Clear</p>
+      </button>
+    </div>
+
+    <!-- Loading indicator (hidden by default) -->
+    <div id="loading" class="loading hidden">
+      <span class="spinner"></span>
+      <p>Summarizing…</p>
+    </div>
+
+    <!-- Summary output (hidden by default) -->
+    <div id="summary-output" class="summary-output hidden"></div>
+
+  </article>
+
+  <script src="./popup.js"></script>
+</body>
+
+</html>

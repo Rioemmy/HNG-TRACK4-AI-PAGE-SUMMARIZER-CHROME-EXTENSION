@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Page Summarizer",
+  "version": "1.0.0",
+  "description": "Summarize any webpage instantly using Groq AI.",
+
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16":  "images/icon.png",
+      "48":  "images/icon.png",
+      "128": "images/icon.png"
+    }
+  },
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+
+  "host_permissions": [
+    "https://api.groq.com/*"
+  ],
+
+  "icons": {
+    "16":  "images/icon.png",
+    "48":  "images/icon.png",
+    "128": "images/icon.png"
+  },
+
+  "content_scripts": [],
+
+  "web_accessible_resources": [
+    {
+      "resources": ["images/*"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

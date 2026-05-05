@@ -1,0 +1,185 @@
+.icon {
+  width: 20px;
+}
+
+.heading-icon {
+  width: 30px;
+}
+
+body {
+  background-color: #000;
+  color: aliceblue;
+  font-family: sans-serif;
+  min-width: 480px;
+}
+
+article {
+  margin: 30px auto;
+  padding: 30px 36px;
+  max-width: 680px;
+}
+
+.heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.page-section {
+  background-color: #1f2937;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.page-details {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.clear-btn,
+.summarize-btn {
+  background: linear-gradient(75deg, #00bce6, #2962ff 50.31%, #d500f9);
+  padding: 5px 10px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.clear-btn:hover,
+.summarize-btn:hover {
+  background: linear-gradient(75deg, #33ccff, #4d82ff 50.31%, #e040fb);
+  transform: translateY(-2px);
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icon-btn {
+  background: linear-gradient(75deg, #00bce6, #2962ff 50.31%, #d500f9);
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.btn-texts {
+  color: aliceblue;
+  font-weight: 700;
+}
+
+.page-text {
+  color: #858a92;
+  font-size: 13px;
+}
+
+/* ── Utility ─────────────────────────────────────────────────────────────── */
+
+/* Use !important so .hidden always wins regardless of other display rules */
+.hidden {
+  display: none !important;
+}
+
+/* ── Loading indicator ───────────────────────────────────────────────────── */
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+  color: #858a92;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #2962ff;
+  border-top-color: #d500f9;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Summary output ──────────────────────────────────────────────────────── */
+
+.summary-output {
+  margin-top: 20px;
+  background-color: #1f2937;
+  border-radius: 10px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 1.7;
+  color: aliceblue;
+}
+
+/* Section headings: SUMMARY, KEY INSIGHTS, READING TIME */
+.summary-output .section-title {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #00bce6;
+  margin: 20px 0 10px;
+}
+
+.summary-output .section-title:first-child {
+  margin-top: 0;
+}
+
+/* Each bullet point rendered as its own paragraph block */
+.summary-output .summary-item {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  padding: 10px 12px;
+  background-color: #111827;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.summary-output .summary-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Bullet dot */
+.summary-output .bullet {
+  color: #2962ff;
+  font-size: 18px;
+  line-height: 1.3;
+  flex-shrink: 0;
+}
+
+/* Reading time displayed as a pill */
+.summary-output .reading-time {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 4px 12px;
+  background: linear-gradient(75deg, #00bce6, #2962ff 50.31%, #d500f9);
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: aliceblue;
+}
+
+/* Error message styling */
+.summary-output.error {
+  color: #f87171;
+  font-size: 13px;
+}
